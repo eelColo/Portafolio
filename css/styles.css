@@ -35,8 +35,8 @@ tridimensional*/
     border: 2px solid black;
     border-radius: 3px;
 
-    
-    background-size: cover;
+    width: 300px;
+    background-size: contain;
     
 
 }
