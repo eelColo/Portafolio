@@ -25,6 +25,7 @@ tridimensional*/
 }
 .box{
     background-image: url(https://static.planetminecraft.com/files/image/minecraft/texture-pack/2020/428/13530476-cover_l.webp);
+    background-size: contain;
     
     
     transition-property: box-shadow, transform;
@@ -36,8 +37,9 @@ tridimensional*/
     border: 2px solid #67502c;
     border-radius: 3px;
 
-    width: 300px;
-    background-size: contain;
+    max-width: 320px;
+    
+    
     
 
 }
@@ -73,8 +75,7 @@ li{
 
 header{
 
-    border-radius: 13px;
-    border-bottom: none;
+    
     color: white;
     margin-left: 70px;
     margin-right: 70px;
@@ -83,15 +84,18 @@ header{
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
     
+    
 
-    border: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 13px;
+    
     
     
 }
 
 header h1{
     color: white;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 40px;
     font-family: monocraft;
     -webkit-text-stroke: 0.5px black;
@@ -100,6 +104,7 @@ header h1{
 
 header li{
     color: white;
+    font-size: 25px;
     
 
 }
@@ -135,14 +140,45 @@ main{
 main h2{
     color: white;
 }
+main img{
+    width: 80px;
+    height: 80px;
+    
+}
+
+.box p{
+    
+    font-size: 23px;
+    color: black;
+    
+    
+    
+}
 
 .tec{
     
     background-image: url(assets/backgrounds/e9904cdb30314092a60f1ec18711bbbf.jpg);
     background-size: cover;
-    
+    font-size: 16px;
     font-weight: lighter;
 }
+
+p{
+    color: white;
+    font-size: 25px;
+}
+
+.enchanting{
+    background-color: rgb(160, 145, 114);
+    border: 3px solid rgb(57, 56, 55);
+    height: 50px;
+    width: 550px;
+    color: black;
+    
+}
+
+
+
 
 /* footer */
 footer{
