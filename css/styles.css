@@ -98,7 +98,8 @@ header h1{
     font-size: 40px;
     font-weight: 40px;
     font-family: monocraft;
-    -webkit-text-stroke: 0.5px black;
+    
+    -webkit-text-stroke: 0.5px black; 
     
 }
 
@@ -168,21 +169,44 @@ p{
     font-size: 25px;
 }
 
-.enchanting{
-    background-color: rgb(160, 145, 114);
-    border: 3px solid rgb(57, 56, 55);
-    height: 50px;
-    width: 550px;
-    color: black;
+.enchanting{    
+    font-size: 20px;
     
+    background-color: rgb(160, 145, 114);  
+    margin: -9px;
+
+    border: 5px solid rgb(40, 39, 39);
+    border-left: 4px solid rgb(105, 94, 73); 
+    
+    outline: 3px solid rgba(234, 211, 166, 0.4);
+    outline-offset: -7px; 
+
+
+    height: 80px;
+    width: 750px;
+    color: rgb(56, 53, 53);
+    
+    
+
+    
+
 }
+.enchanting img{
+    
+    width: 40px;
+    height: auto;
+}
+
+
 
 
 
 
 /* footer */
 footer{
-    background-image: url(assets/backgrounds/obsidian.jpg);
+    background-image: url(https://static.planetminecraft.com/files/image/minecraft/texture-pack/2022/688/15763358-unnamed_l.webp);
     background-size: 70px;
+
+    margin-top: 60px;
     height: 70px;
 }
