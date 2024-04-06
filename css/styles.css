@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(assets/monocraft.zip);
 
 
 *{
@@ -169,6 +169,8 @@ p{
     font-size: 25px;
 }
 
+
+/* Zona de formacion, con animacion */
 .enchanting{    
     font-size: 20px;
     
@@ -183,20 +185,33 @@ p{
 
 
     height: 80px;
-    width: 750px;
+    width: 610px;
     color: rgb(56, 53, 53);
     
-    
+    transition-property: box-shadow, transform;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+    animation-fill-mode: forwards;
 
     
 
 }
+.enchanting:hover{
+    transform: scale(1.1);
+}
+
+
+
 .enchanting img{
     
     width: 40px;
     height: auto;
 }
-
+.enchantingxp{
+    color: greenyellow;
+    margin-left: 80px;
+}
 
 
 
