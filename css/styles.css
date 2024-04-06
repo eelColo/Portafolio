@@ -1,4 +1,7 @@
-@import url(assets/monocraft.zip);
+@font-face {
+    font-family: 'monocraft';
+    src: url(assets/fonts/Monocraft.ttf);
+}
 
 
 *{
