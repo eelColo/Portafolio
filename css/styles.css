@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'monocraft';
-    src: url(assets/fonts/Monocraft.ttf);
+    src: url(assets/fonts/Monocraft.ttf );
 }
 
 
@@ -61,7 +61,7 @@ body{
 nav{
     background-image: url(assets/backgrounds/obsidian.jpg);
     background-size: 70px;
-    height: 70px;
+    height: 4.53em;
     
 }
 nav button{
@@ -80,8 +80,8 @@ header{
 
     
     color: white;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 3rem;
+    margin-right: 3rem;
     padding-top: 300px;
     padding-bottom: 320px;
     background-image: url(https://i.redd.it/841666uly00b1.gif);
@@ -121,6 +121,7 @@ header li{
     
 }
 .a img{
+    
     width: 30px;
 }
 a{
@@ -132,8 +133,9 @@ a{
 
 /* main */
 main{
-    margin-left: 70px;
-    margin-right: 70px;
+    
+    margin-left: 3rem;
+    margin-right: 3rem;
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
     border: none;
@@ -154,9 +156,7 @@ main img{
     
     font-size: 23px;
     color: black;
-    
-    
-    
+
 }
 
 .tec{
@@ -215,8 +215,15 @@ p{
     margin-left: 80px;
 }
 
+.habilidadesp{
+    display: none;
+    
+}
 
-
+/* .carousel, .slide{
+    height: 320px;
+    width: 480px;
+} */
 
 
 /* footer */
