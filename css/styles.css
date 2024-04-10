@@ -146,7 +146,7 @@ main{
 main h2{
     color: white;
 }
-main img{
+.book{
     width: 80px;
     height: 80px;
     
@@ -220,10 +220,17 @@ p{
     
 }
 
-/* .carousel, .slide{
-    height: 320px;
-    width: 480px;
-} */
+
+.carousel{
+    
+    margin-left: 300px;
+    margin-right: 300px;
+}
+.carousel-item{
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
 
 
 /* footer */
