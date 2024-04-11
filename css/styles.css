@@ -138,6 +138,7 @@ main{
     margin-right: 3rem;
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
+    
     border: none;
     
     
@@ -173,10 +174,10 @@ p{
 
 /* Proyectos carrusel */
 .carousel{
-    margin-left: 300px;
-    margin-right: 300px;
-    padding-left: 150px;
-    padding-right: 150px;
+    /* margin-left: 300px;
+    margin-right: 300px; */
+    
+    /* min-width: 561px; */
 }
 
 
