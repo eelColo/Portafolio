@@ -80,8 +80,12 @@ header{
 
     
     color: white;
-    margin-left: 3rem;
-    margin-right: 3rem;
+
+    width: 95%;
+    margin: auto;
+
+    /* margin-left: 3rem;
+    margin-right: 3rem; */
     padding-top: 300px;
     padding-bottom: 320px;
     background-image: url(https://i.redd.it/841666uly00b1.gif);
@@ -133,9 +137,10 @@ a{
 
 /* main */
 main{
-    
-    margin-left: 3rem;
-    margin-right: 3rem;
+    width: 95%;
+    margin: auto;
+    /* margin-left: 3rem;
+    margin-right: 3rem; */
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
     
@@ -177,7 +182,8 @@ p{
     /* margin-left: 300px;
     margin-right: 300px; */
     
-    /* min-width: 561px; */
+    min-width: 320px; 
+    max-width: 1220px;
 }
 
 
