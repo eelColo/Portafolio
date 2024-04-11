@@ -171,6 +171,17 @@ p{
     color: white;
 }
 
+/* Proyectos carrusel */
+.carousel{
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+
+
+
 
 /* Zona de formacion, con animacion */
 .enchanting{    
@@ -215,21 +226,20 @@ p{
     margin-left: 80px;
 }
 
+.aboutme{
+    font-size: 1.5rem;
+}
+
+
 .habilidadesp{
     display: none;
     
 }
 
 
-.carousel{
-    
-    margin-left: 300px;
-    margin-right: 300px;
-}
-.carousel-item{
-    padding-left: 120px;
-    padding-right: 120px;
-}
+
+
+
 
 
 
