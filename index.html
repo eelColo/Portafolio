@@ -24,13 +24,13 @@
         <div class="text-center">
             <h1>¡Hola! <br> Franco Lens, desarrollador fullstack.</h1>
 
-            <ul class="w-auto ">
-                <li class="m-2 d-inline-block">Java</li>
+            <ul id="tech1" class="w-auto ">
+                <!-- <li class="m-2 d-inline-block">Java</li>
                 <li class="m-2 d-inline-block">Spring-Framework</li>
                 <li class="m-2 d-inline-block">Html</li>
                 <li class="m-2 d-inline-block">CSS</li>
                 <li class="m-2 d-inline-block">JS</li>
-                <li class="m-2 d-inline-block">NodeJS</li>
+                <li class="m-2 d-inline-block">NodeJS</li> -->
             </ul>
         </div>    
     </header>    
@@ -39,43 +39,74 @@
     <!-- Proyectos, sobre mi -->
     <main class="text-center">
         <!-- proyectos -->
-        <h2 class="p-5 ">{Proyectos}</h2>
+        <section class="d-flex justify-content-center ">
+        <h2 class="p-5 ">{Proyectos}  </h2>
+        <img src="css/assets/logos/Crafting_Table_JE4_BE3.webp" class="book m-0 mt-4  " alt="">
+        </section>
         
-        <div id="carousel-proyects" class="carousel slide m-auto ">
+        <div id="carousel-proyects" class="carousel slide m-auto">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel-proyects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carousel-proyects" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carousel-proyects" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
 
-            <div class="carousel-inner">
+            <!-- Imagenes con tecnologias a renderizar -->
+            <div id="carouselExample" class="carousel slide">
+                <div id="proyectoCarousel" class="carousel-inner">
+                    <!-- <div class="carousel-item active">
+                        <img src="css/assets/examples/prodApiexample.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
 
-                <div class="carousel-item active d-flex ">
-                    <img src="css/assets/examples/Captura de pantalla (133).png" class="w-75  d-block  m-auto " alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <p class="d-inline p-1 border border-1 border-black tec"> Java</p>
-                        <p class="d-inline p-1 border border-1 border-black tec"> Java</p>
-                        <p class="d-inline p-1 border border-1 border-black tec"> Java</p>
-                        <p class="d-inline p-1 border border-1 border-black tec"> Java</p>
-                        <p class="d-inline p-1 border border-1 border-black tec"> Java</p>
-                    </div>
+                            <p class="d-inline p-1 border border-1 border-black tec"> Java</p>
+                            <p class="d-inline p-1 border border-1 border-black tec"> Spring-boot</p>
+                            <p class="d-inline p-1 border border-1 border-black tec"> mySQL</p>
+                            <p class="d-inline p-1 border border-1 border-black tec"> POSTMAN</p>
+                            
+                        </div>
+                    </div> -->
+                
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+            
+            <!-- <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="css/assets/examples/prodApiexample.png" class="w-75  d-block  m-auto img-fluid  " alt="...">
+                    
                 </div>
 
                 <div class="carousel-item">
-                    <img src="css/assets/examples/Captura de pantalla (142).png" class="w-75  d-block m-auto" alt="...">
+                    <img src="css/assets/examples/lumina.png" class="w-75  d-block m-auto img-fluid " alt="...">
                 </div>
 
                 <div class="carousel-item">
-                    <img src="css/assets/examples/Captura de pantalla (178).png" class="w-75 d-block m-auto"  alt="...">
+                    <img src="css/assets/examples/Captura de pantalla (178).png" class="w-75 d-block m-auto img-fluid "  alt="...">
                 </div>
 
             </div>
             
-            <button class="carousel-control-prev " type="button" data-bs-target="#carousel-proyects" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-proyects" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-proyects  " data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-proyects" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -84,9 +115,9 @@
 
             
             
-            
+            -->
 
-        </div>
+        </div> 
 
         <!-- Sobre mi -->
         <div class=" m-auto ">
