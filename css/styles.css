@@ -11,8 +11,8 @@
     font-family: monocraft;
 }
 
-/* Animacion de cuadrado 
-utilizando 8 sombras iniciales sin posicion, 
+/* Animacion de cuadrado
+utilizando 8 sombras iniciales sin posicion,
 pasandolas a 8 sombras en posiciones escalonadas para generar el efecto
 tridimensional*/
 
@@ -29,8 +29,8 @@ tridimensional*/
 .box{
     background-image: url(https://static.planetminecraft.com/files/image/minecraft/texture-pack/2020/428/13530476-cover_l.webp);
     background-size: contain;
-    
-    
+
+
     transition-property: box-shadow, transform;
     transition-duration: 0.4s;
     transition-timing-function: ease;
@@ -41,9 +41,9 @@ tridimensional*/
     border-radius: 3px;
 
     max-width: 320px;
-    
-    
-    
+
+
+
 
 }
 .box:hover{
@@ -62,7 +62,7 @@ nav{
     background-image: url(assets/backgrounds/obsidian.jpg);
     background-size: 70px;
     height: 4.53em;
-    
+
 }
 nav button{
     color: white;
@@ -70,7 +70,7 @@ nav button{
 
 li{
     list-style: none;
-    
+
 }
 
 
@@ -78,7 +78,7 @@ li{
 
 header{
 
-    
+
     color: white;
 
     width: 95%;
@@ -90,14 +90,14 @@ header{
     padding-bottom: 320px;
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
-    
-    
+
+
 
     border-top: 3px solid black;
     border-radius: 13px;
-    
-    
-    
+
+
+
 }
 
 header h1{
@@ -105,15 +105,15 @@ header h1{
     font-size: 40px;
     font-weight: 40px;
     font-family: monocraft;
-    
-    -webkit-text-stroke: 0.5px black; 
-    
+
+    -webkit-text-stroke: 0.5px black;
+
 }
 
 header li{
     color: white;
     font-size: 25px;
-    
+
 
 }
 
@@ -122,15 +122,15 @@ header li{
     border: 0px;
     margin: 15px;
     background-color: unset;
-    
+
 }
 .a img{
-    
+
     width: 30px;
 }
 a{
     text-decoration: none;
-    color: unset;   
+    color: unset;
 }
 
 
@@ -143,11 +143,11 @@ main{
     margin-right: 3rem; */
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
-    
+
     border: none;
-    
-    
-    
+
+
+
 }
 main h2{
     color: white;
@@ -155,18 +155,18 @@ main h2{
 .book{
     width: 80px;
     height: 80px;
-    
+
 }
 
 .box p{
-    
+
     font-size: 23px;
     color: black;
 
 }
 
 .tec{
-    
+
     background-image: url(assets/backgrounds/e9904cdb30314092a60f1ec18711bbbf.jpg);
     background-size: cover;
     font-size: 16px;
@@ -181,40 +181,43 @@ p{
 .carousel{
     /* margin-left: 300px;
     margin-right: 300px; */
-    
-    min-width: 320px; 
+
+    min-width: 320px;
     max-width: 1220px;
 }
 
 
 
 
-
 /* Zona de formacion, con animacion */
-.enchanting{    
+.enchanting{
     font-size: 20px;
-    
-    background-color: rgb(160, 145, 114);  
+
+
+
+    background-color: rgb(160, 145, 114);
     margin: -9px;
 
     border: 5px solid rgb(40, 39, 39);
-    border-left: 4px solid rgb(105, 94, 73); 
-    
+    border-left: 4px solid rgb(105, 94, 73);
+
     outline: 3px solid rgba(234, 211, 166, 0.4);
-    outline-offset: -7px; 
+    outline-offset: -7px;
 
 
-    height: 80px;
+    min-height: 80px;
+    max-height: 120;
     width: 610px;
     color: rgb(56, 53, 53);
-    
+
     transition-property: box-shadow, transform;
     transition-duration: 0.4s;
     transition-timing-function: ease;
     transition-delay: 0s;
     animation-fill-mode: forwards;
 
-    
+
+
 
 }
 .enchanting:hover{
@@ -224,13 +227,28 @@ p{
 
 
 .enchanting img{
-    
+    align-self: center;
     width: 40px;
-    height: auto;
+    height: 40px;
+    margin-left: 5px;
+
+
 }
+.enchantingButton{
+    align-self: center;
+    border: none;
+    background-color: transparent;
+    padding-left: 10px;
+    text-align: start;
+    width: 100%;
+}
+
 .enchantingxp{
     color: greenyellow;
-    margin-left: 80px;
+    margin: 15px;
+    align-self: center;
+
+
 }
 
 .aboutme{
@@ -238,10 +256,6 @@ p{
 }
 
 
-.habilidadesp{
-    display: none;
-    
-}
 
 
 

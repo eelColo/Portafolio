@@ -1,8 +1,10 @@
 
-//atributos
+// Atributos
+// Header
 const hTech = document.getElementById("tech1");
-const LTech = ['Java', 'HTML5', 'Css', 'Javascript', 'mySql', 'Spring-boot'];
+const listTech = ['Java', 'HTML5', 'Css', 'Javascript', 'mySql', 'Spring-boot'];
 
+// Proyectos
 const proyects = document.getElementById("proyectoCarousel");
 const proyectInfo = [
     {
@@ -13,27 +15,52 @@ const proyectInfo = [
     }
 ];
 
+// Estudios
+const estudios = document.getElementById("formacion");
+const estudiosInf = [
+    {
+        titulo: "Java Developer | Educacion IT",
+        certificado: "",
+        resumen: "Bootcamp Java Backend donde me capacitaron en desarrollo web con Java Spring-Framework, Maven, Git & Github, mySQL entre otras. <br> Desarrollamos API`S RESTFULL que se comunicaban con nuestra base de datos mySQL e interactuaban con nuestros maquetados.",
+        finalizado: true
+    },
+    {
+        titulo: "FullStack-Developer | Fundacion Pescar junto a J.P Morgan",
+        certificado: "",
+        resumen: "Capacitacion laboral FullStack de la mano de Fundacion Pescar donde me estoy capacitando como desarrollador web fullstack con tecnologias y teoria sobre: HTML5, Css, JavaScript, Node.js, Maquetacion web avanzada, React, Angular, MongoDB, UML, etc.",
+        finalizado: false
+    }
+]
 
 
-//funciones
-//renderizado de tecnologias del HEADER
+
+// Funciones
+
+// Renderizado de tecnologias del HEADER
 function renderTechH(){
-    for(let element of LTech){
+    for(let element of listTech){
         hTech.innerHTML += `<li class="m-2 d-inline-block">${element}</li>`;
     }
 }
 
-// Renderizado de tecnologias dentro del proyecto
+// Renderizado de tecnologias dentro del proyecto para apartado de trabajos
 function renderProysTech(){
     for(let item of proyectInfo){
         
         for(let i = 0; i < item["tecnologias"].length; i++){
-            console.log(item.tecnologias);
-            const slide = document.querySelector("#slidetec");
-            slide.innerHTML += `<p id="slidetec" class="d-inline p-1 m-1 border border-1 border-black tec">${item.tecnologias[i]}</p>`
+            
+            const slideUl = document.querySelector("#slidetec");
+            const slideLi = document.createElement('li');
+            Object.assign(slideLi, {
+                className: "d-inline p-1 m-1 border border-1 border-black tec",
+                textContent: item.tecnologias[i]
+            });
+            slideUl.appendChild(slideLi);
         }
     }
 }
+
+
 
 // Renderizado de proyectos (llama a la funcion de arriba para renderizar tecnologias)
 function renderProys(){
@@ -41,30 +68,65 @@ function renderProys(){
         proyects.innerHTML += `
         <div class="carousel-item active">
             <img src="${item.imgUrl}" class="d-block w-100" alt="...">
-            <div id="slidetec" class="carousel-caption d-none d-md-block">
+            <ul id="slidetec" class="carousel-caption d-none d-md-block">
 
-            </div>
+            </ul>
         </div>`
         renderProysTech();
     }
 }
 
 
+function renderStudies(){
+    for(let x = 0; x < estudiosInf.length ; x++){
+        estudios.innerHTML+= `
+        <li class="enchanting m-auto d-flex" >
+            <img src="css/assets/logos/Experience_Orb.webp" alt="XP orb">
+            <button class="enchantingButton">
+                
+                ${estudiosInf[x].titulo}
+                    
+            </button> 
+            <span class="enchantingxp">29</span>
+        </li>
+        <p id="resumen${x}" class="d-none habilidadesp text-center w-50 p-3 m-auto">${estudiosInf[x].resumen}</p>
+        `
 
-
-
-//borrar y rehacer
-function toggletext(number){
-    var text = document.getElementById("habilidades" + number);
-    if(text.style.display == "none"){
-        text.style.display = "block";
-    } else {
-        text.style.display = "none";
+        
     }
-
-
 }
 
+
+
+
+
+
+
+
+// Recupera los botones de los estudios, los itera y a cada uno le agrega un addEventListener al click para que tome el id de los resumenes y chequee si tiene la clase d-none y cambiarla por block o none devuelta
+const evButton = () => {
+    const estudiosButton = document.querySelectorAll('.enchantingButton');
+    
+    
+    estudiosButton.forEach((btn, i) => {
+        
+        btn.addEventListener('click', () => {
+            
+            const resumenEstudios = document.getElementById("resumen" + i);
+            if(resumenEstudios.className == "d-none"){
+                resumenEstudios.classList.toggle("d-block");
+            } else {
+                resumenEstudios.classList.toggle("d-none");
+            }
+            
+        });
+    
+    });
+}
 //eventos
-renderTechH();
-renderProys();
+document.addEventListener('DOMContentLoaded',() =>{
+    renderTechH();
+    renderProys();
+    renderStudies();
+    evButton();
+});
