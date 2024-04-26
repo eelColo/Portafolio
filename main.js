@@ -67,7 +67,7 @@ function renderProys(){
     for(let item of proyectInfo){
         proyects.innerHTML += `
         <div class="carousel-item active">
-            <img src="${item.imgUrl}" class="d-block w-100" alt="...">
+            <img src="${item.imgUrl}" class="d-inline-block w-100" alt="proyecto_${item.titulo}">
             <ul id="slidetec" class="carousel-caption d-none d-md-block">
 
             </ul>
@@ -80,8 +80,8 @@ function renderProys(){
 function renderStudies(){
     for(let x = 0; x < estudiosInf.length ; x++){
         estudios.innerHTML+= `
-        <li class="enchanting m-auto d-flex" >
-            <img src="css/assets/logos/Experience_Orb.webp" alt="XP orb">
+        <li class="col-12 enchanting m-auto d-flex" >
+            <img src="css/assets/logos/Experience_Orb.webp" alt="xp_orb">
             <button class="enchantingButton">
                 
                 ${estudiosInf[x].titulo}
@@ -89,7 +89,7 @@ function renderStudies(){
             </button> 
             <span class="enchantingxp">29</span>
         </li>
-        <p id="resumen${x}" class="d-none habilidadesp text-center w-50 p-3 m-auto">${estudiosInf[x].resumen}</p>
+        <p id="resumen${x}" class="d-none habilidadesp text-center w-75 p-2 m-auto">${estudiosInf[x].resumen}</p>
         `
 
         

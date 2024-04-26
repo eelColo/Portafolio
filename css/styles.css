@@ -18,18 +18,17 @@ tridimensional*/
 
 @keyframes box-pop-out{
     0%{
-        box-shadow: 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black;
+        box-shadow: 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black, 0px 0px black;
         transform: translate(0px, 0px);
     }
     100%{
-        box-shadow: 1px -1px #67502c, 2px -2px #67502c, 3px -3px #67502c, 4px -4px #67502c, 5px -5px #67502c, 6px -6px #67502c, 7px -7px #67502c, 8px -8px #67502c, 9px -9px #67502c, 10px -10px #67502c;
-        transform: translate(-8px, 8px);
+        box-shadow: 1px -1px grey, 2px -2px grey, 3px -3px grey, 4px -4px grey, 5px -5px black;
+        transform: translate(-5px, 5px);
     }
 }
 .box{
-    background-image: url(https://static.planetminecraft.com/files/image/minecraft/texture-pack/2020/428/13530476-cover_l.webp);
+    /* background-image: url(https://static.planetminecraft.com/files/image/minecraft/texture-pack/2020/428/13530476-cover_l.webp); */
     background-size: contain;
-
 
     transition-property: box-shadow, transform;
     transition-duration: 0.4s;
@@ -37,10 +36,7 @@ tridimensional*/
     transition-delay: 0s;
     animation-fill-mode: forwards;
 
-    border: 2px solid #67502c;
-    border-radius: 3px;
-
-    max-width: 320px;
+    
 
 
 
@@ -83,9 +79,6 @@ header{
 
     width: 95%;
     margin: auto;
-
-    /* margin-left: 3rem;
-    margin-right: 3rem; */
     padding-top: 300px;
     padding-bottom: 320px;
     background-image: url(https://i.redd.it/841666uly00b1.gif);
@@ -139,8 +132,7 @@ a{
 main{
     width: 95%;
     margin: auto;
-    /* margin-left: 3rem;
-    margin-right: 3rem; */
+
     background-image: url(https://i.redd.it/841666uly00b1.gif);
     background-size: 100px;
 
@@ -179,12 +171,19 @@ p{
 
 /* Proyectos carrusel */
 .carousel{
-    /* margin-left: 300px;
-    margin-right: 300px; */
+    
 
     min-width: 320px;
     max-width: 1220px;
 }
+
+.carousel-item, img{
+    max-height: 650px;
+    max-width: 1200px;
+    
+}
+
+
 
 
 
@@ -192,8 +191,6 @@ p{
 /* Zona de formacion, con animacion */
 .enchanting{
     font-size: 20px;
-
-
 
     background-color: rgb(160, 145, 114);
     margin: -9px;
@@ -204,10 +201,11 @@ p{
     outline: 3px solid rgba(234, 211, 166, 0.4);
     outline-offset: -7px;
 
-
     min-height: 80px;
-    max-height: 120;
-    width: 610px;
+    max-height: fit-content;
+    
+
+    max-width: 580px;
     color: rgb(56, 53, 53);
 
     transition-property: box-shadow, transform;
@@ -271,4 +269,7 @@ footer{
 
     margin-top: 60px;
     height: 70px;
+}
+footer li{
+    width: fit-content;
 }
