@@ -71,8 +71,12 @@ li{
 
 
 /* header */
-
 header{
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+header, main{
 
 
     color: white;
@@ -81,16 +85,14 @@ header{
     margin: auto;
     padding-top: 300px;
     padding-bottom: 320px;
-    background-image: url(https://i.redd.it/841666uly00b1.gif);
+    
     background-size: 100px;
-
-
-
-    border-top: 3px solid black;
-    border-radius: 13px;
-
-
-
+}
+.gifBack{
+    background-image: url(https://i.redd.it/841666uly00b1.gif);
+}
+.pngBack{
+    background-image: url(assets/backgrounds/staticNetherFrame.png);
 }
 
 header h1{
@@ -114,6 +116,7 @@ header li{
 .a{
     border: 0px;
     margin: 15px;
+    margin-left: 35px;
     background-color: unset;
 
 }
@@ -129,18 +132,16 @@ a{
 
 
 /* main */
-main{
+/* main{
     width: 95%;
     margin: auto;
-
-    background-image: url(https://i.redd.it/841666uly00b1.gif);
+    background-image: url(https://i.redd.it/841666uly00b1.gif); 
     background-size: 100px;
-
     border: none;
 
 
 
-}
+} */
 main h2{
     color: white;
 }
