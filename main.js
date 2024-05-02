@@ -31,7 +31,7 @@ const estudiosInf = [
     },
     {
         
-        titulo: "FullStack-Developer | Fundacion Pescar junto a J.P Morgan",
+        titulo: "FullStack-Developer | Fundacion Pescar | J.P Morgan",
         certificado: "",
         resumen: "Capacitacion laboral FullStack de la mano de Fundacion Pescar donde me estoy capacitando como desarrollador web fullstack con tecnologias y teoria sobre: HTML5, Css, JavaScript, Node.js, Maquetacion web avanzada, React, Angular, MongoDB, UML, etc.",
         finalizado: false
@@ -59,7 +59,7 @@ function renderTechH(){
 
 
 
-// Renderizado de proyectos (llama a la funcion de arriba para renderizar tecnologias)
+// Renderizado de proyectos y luego las tecnologias utilizadas dentro del mismo
 function renderProys(){
     const proyects = document.getElementById("proyectoCarousel");
 
@@ -69,32 +69,18 @@ function renderProys(){
         <div class="carousel-item ${i === 0 ? 'active' : ''}">
             <img src="${actualItem.imgUrl}" class="d-inline-block img-fluid " alt="proyecto_${actualItem.titulo}">
             <a href="${actualItem.link}" class="carousel-caption d-none d-md-block ">
+
             <h5 class="mb-4">${actualItem.titulo}</h5>
             
-            
             <ul id="slidetec${i}" class="p-0 d-none d-md-block">
-
-            </ul>
-            
+            </ul>   
             </button>
-            
-            
-    
         </div>`
 
-
-        console.log("termina el renderizado de proyecto:" + i)
-
-        
-
         const slideUl = document.getElementById("slidetec" + i);
-
-        console.log("cambio de id de ul" + slideUl )
-        //EL PROBLEMA ESTA ACA
-        for(let x = 0; x < actualItem.tecnologias.length; x++){
-            console.log("entra al segundo loop de tecnologias en posicion:" + x)
+        
+        for(let x = 0; x < actualItem.tecnologias.length; x++){  
             const slideLi = document.createElement('li');
-
             slideLi.className = "d-inline p-1 m-1 border border-1 border-black tec";
             slideLi.textContent = actualItem.tecnologias[x];
             slideUl.appendChild(slideLi);
@@ -116,7 +102,7 @@ function renderStudies(){
                 ${estudiosInf[x].titulo}
                     
             </button> 
-            <span class="enchantingxp">29</span>
+            <span class="enchantingxp">${estudiosInf[x].finalizado ? 'Terminado' : "Cursando"}</span>
         </li>
         <p id="resumen${x}" class="d-none habilidadesp text-center w-75 p-2 m-auto">${estudiosInf[x].resumen}</p>
         `
@@ -150,9 +136,9 @@ const evButton = () => {
 //Boton para detener el gif
 
 const stopGif = () => {
-    const headerBackground = document.getElementsByName("header");
-    const mainBackground = document.getElementsByName("main");
-
+    const headerBackground = document.querySelector("header");
+    const mainBackground = document.querySelector("main");
+    
 
     const stopButton = document.querySelector(".a");
     const logo = document.querySelector(".a svg");
@@ -160,28 +146,34 @@ const stopGif = () => {
 
     stopButton.addEventListener('click', () => {
 
-        if(logo.getAttribute('id') == "stopButton1"){
-            stopButton.innerHTML = `<svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+        if(headerBackground.classList.contains('gifBack') && mainBackground.classList.contains('gifBack')){
+
+            stopButton.innerHTML = 
+            `<svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
             </svg>`
 
             logo.setAttribute('id', 'playButton1');
             
-            headerBackground.classList.toggle("pngBack")
-            mainBackground.classList.toggle("pngBack");
+            headerBackground.classList.remove("gifBack");
+            mainBackground.classList.remove("gifBack");
 
-
-            
-        } else if (logo.getAttribute('id') == "playButton1") {
-            
-            stopButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-stop-fill" viewBox="0 0 16 16">
-            <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"/>`
-
-            logo.setAttribute('id', 'stopButton1');
+            mainBackground.classList.add("pngBack");
+            headerBackground.classList.add("pngBack");
 
             
+        } else if(headerBackground.classList.contains('pngBack') && mainBackground.classList.contains('pngBack')) {
+            
+            stopButton.innerHTML = 
+            `<svg id="stopButton1" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-stop-fill" viewBox="0 0 16 16">
+            <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"/>
+            </svg>`
 
+            mainBackground.classList.remove("pngBack");
+            headerBackground.classList.remove("pngBack");
 
+            headerBackground.classList.add("gifBack");
+            mainBackground.classList.add("gifBack");
         }
 
     });

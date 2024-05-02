@@ -108,7 +108,7 @@ h5{
     font-size: 1.5rem;
     
 }
-.carousel-caption{
+.carousel-caption, .fo{
     background-color: rgba(104, 104, 104, 0.41) ;
 }
 
