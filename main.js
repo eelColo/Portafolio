@@ -1,17 +1,21 @@
 
 // Atributos
-// Header
-const hTech = document.getElementById("tech1");
-const listTech = ['Java', 'HTML5', 'Css', 'Javascript', 'mySql', 'Spring-boot'];
+
 
 // Proyectos
-const proyects = document.getElementById("proyectoCarousel");
+
 const proyectInfo = [
     {
         titulo: "Producto API",
-        tecnologias: ["Java", 'Spring-Boot', 'Html', 'Css', 'mySQL', 'Tomcat', 'Hibernate'],
+        tecnologias: ["Java", 'Spring-Boot', 'Html', 'Css', 'mySQL', 'Tomcat', 'Hibernate', 'PostMan'],
         link: "https://github.com/eelColo/ProductoApi",
         imgUrl: 'css/assets/examples/producto-api-example.png'
+    },
+    {
+        titulo: "Lumina LandinPage",
+        tecnologias: ["Html5", "Css", "Bootstrap"],
+        link: "https://github.com/eelColo/Lumina",
+        imgUrl: 'css/assets/examples/lumina.png'
     }
 ];
 
@@ -19,12 +23,14 @@ const proyectInfo = [
 const estudios = document.getElementById("formacion");
 const estudiosInf = [
     {
+        
         titulo: "Java Developer | Educacion IT",
         certificado: "",
         resumen: "Bootcamp Java Backend donde me capacitaron en desarrollo web con Java Spring-Framework, Maven, Git & Github, mySQL entre otras. <br> Desarrollamos API`S RESTFULL que se comunicaban con nuestra base de datos mySQL e interactuaban con nuestros maquetados.",
         finalizado: true
     },
     {
+        
         titulo: "FullStack-Developer | Fundacion Pescar junto a J.P Morgan",
         certificado: "",
         resumen: "Capacitacion laboral FullStack de la mano de Fundacion Pescar donde me estoy capacitando como desarrollador web fullstack con tecnologias y teoria sobre: HTML5, Css, JavaScript, Node.js, Maquetacion web avanzada, React, Angular, MongoDB, UML, etc.",
@@ -41,43 +47,63 @@ const estudiosInf = [
 
 // Renderizado de tecnologias del HEADER
 function renderTechH(){
+    // Header
+    const hTech = document.getElementById("tech1");
+    const listTech = ['Java', 'HTML5', 'Css', 'Javascript', 'mySql', 'Spring-boot'];
     for(let element of listTech){
         hTech.innerHTML += `<li class="m-2 d-inline-block">${element}</li>`;
     }
 }
 
-// Renderizado de tecnologias dentro del proyecto para apartado de trabajos
-function renderProysTech(){
-    for(let item of proyectInfo){
-        
-        for(let i = 0; i < item["tecnologias"].length; i++){
-            
-            const slideUl = document.querySelector("#slidetec");
-            const slideLi = document.createElement('li');
-            Object.assign(slideLi, {
-                className: "d-inline p-1 m-1 border border-1 border-black tec",
-                textContent: item.tecnologias[i]
-            });
-            slideUl.appendChild(slideLi);
-        }
-    }
-}
+
 
 
 
 // Renderizado de proyectos (llama a la funcion de arriba para renderizar tecnologias)
 function renderProys(){
-    for(let item of proyectInfo){
+    const proyects = document.getElementById("proyectoCarousel");
+
+    for(let i = 0; i < proyectInfo.length; i++){
+        const actualItem = proyectInfo[i];
         proyects.innerHTML += `
-        <div class="carousel-item active">
-            <img src="${item.imgUrl}" class="d-inline-block w-100" alt="proyecto_${item.titulo}">
-            <ul id="slidetec" class="carousel-caption d-none d-md-block">
+        <div class="carousel-item ${i === 0 ? 'active' : ''}">
+            <img src="${actualItem.imgUrl}" class="d-inline-block img-fluid " alt="proyecto_${actualItem.titulo}">
+            <a href="${actualItem.link}" class="carousel-caption d-none d-md-block ">
+            <h5 class="mb-4">${actualItem.titulo}</h5>
+            
+            
+            <ul id="slidetec${i}" class="p-0 d-none d-md-block">
 
             </ul>
+            
+            </button>
+            
+            
+    
         </div>`
-        renderProysTech();
+
+
+        console.log("termina el renderizado de proyecto:" + i)
+
+        
+
+        const slideUl = document.getElementById("slidetec" + i);
+
+        console.log("cambio de id de ul" + slideUl )
+        //EL PROBLEMA ESTA ACA
+        for(let x = 0; x < actualItem.tecnologias.length; x++){
+            console.log("entra al segundo loop de tecnologias en posicion:" + x)
+            const slideLi = document.createElement('li');
+
+            slideLi.className = "d-inline p-1 m-1 border border-1 border-black tec";
+            slideLi.textContent = actualItem.tecnologias[x];
+            slideUl.appendChild(slideLi);
+        }
+        
     }
 }
+
+
 
 
 function renderStudies(){
