@@ -77,15 +77,11 @@ header{
 }
 
 header, main{
-
-
     color: white;
-
     width: 95%;
     margin: auto;
     padding-top: 300px;
-    padding-bottom: 320px;
-    
+    padding-bottom: 320px;   
     background-size: 100px;
 }
 .gifBack{
