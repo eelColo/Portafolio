@@ -26,14 +26,14 @@ const estudiosInf = [
         
         titulo: "Java Developer | Educacion IT",
         certificado: "",
-        resumen: "Bootcamp Java Backend donde me capacitaron en desarrollo web con Java Spring-Framework, Maven, Git & Github, mySQL entre otras. <br> Desarrollamos API`S RESTFULL que se comunicaban con nuestra base de datos mySQL e interactuaban con nuestros maquetados.",
+        resumen: "Bootcamp Java Backend donde me capacite en desarrollo web con Java Spring-Framework, Maven, Git & Github, mySQL entre otras. <br> Desarrollamos API`S RESTFULL que se comunicaban con nuestra base de datos mySQL e interactuaban con nuestros maquetados.",
         finalizado: true
     },
     {
         
         titulo: "FullStack-Developer | Fundacion Pescar | J.P Morgan",
         certificado: "",
-        resumen: "Capacitacion laboral FullStack de la mano de Fundacion Pescar donde me estoy capacitando como desarrollador web fullstack con tecnologias y teoria sobre: HTML5, Css, JavaScript, Node.js, Maquetacion web avanzada, React, Angular, MongoDB, UML, etc.",
+        resumen: "Capacitacion laboral FullStack de la mano de Fundacion Pescar donde me capacito como fullstack con habilidades socioemocionales y tecnologias como: HTML5, Css, JavaScript, Node.js, Maquetacion web avanzada, React, Angular, MongoDB, UML, etc.",
         finalizado: false
     }
 ]
@@ -68,13 +68,16 @@ function renderProys(){
         proyects.innerHTML += `
         <div class="carousel-item ${i === 0 ? 'active' : ''}">
             <img src="${actualItem.imgUrl}" class="d-inline-block img-fluid " alt="proyecto_${actualItem.titulo}">
-            <a href="${actualItem.link}" class="carousel-caption d-none d-md-block ">
+            <a href="${actualItem.link}" class="carousel-caption box d-none d-md-block ">
+            <div class="d-flex justify-content-center ">
 
             <h5 class="mb-4">${actualItem.titulo}</h5>
-            
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="white" class="m-1" viewBox="0 0 17 17">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+            </div>
             <ul id="slidetec${i}" class="p-0 d-none d-md-block">
             </ul>   
-            </button>
+            
         </div>`
 
         const slideUl = document.getElementById("slidetec" + i);
@@ -140,8 +143,8 @@ const stopGif = () => {
     const mainBackground = document.querySelector("main");
     
 
-    const stopButton = document.querySelector(".a");
-    const logo = document.querySelector(".a svg");
+    const stopButton = document.querySelector(".alter");
+    const logo = document.querySelector(".alter svg");
     console.log(logo);
 
     stopButton.addEventListener('click', () => {
