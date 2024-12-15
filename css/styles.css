@@ -101,11 +101,11 @@ header, main{
 
 header h1{
     color: white;
-    font-size: 2.5rem;
-    font-weight: 40px;
+    font-size: 3rem;
+    font-weight: normal;
     font-family: monocraft;
 
-    -webkit-text-stroke: 0.5px black;
+    -webkit-text-stroke: 0.6px black;
 
 }
 h5{
@@ -136,11 +136,21 @@ img{
     width: 100%;
     height: 100%;
 }
+.proy{
+    margin: auto;
+    width: 70%;
+}
 .proy-banner{
     border: 5px solid black;
     background-color: darkslateblue;
-    width: 30%;
+    width: 100%;
+    min-height: 300px;
+    margin: 15px;
+    
+    font-size: 20px;
 }
+
+
 /* idioma y modos */
 a{
     text-decoration: none;
