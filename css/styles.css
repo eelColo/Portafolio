@@ -112,10 +112,7 @@ h5{
     font-size: 1.5rem;
     
 }
-.carousel-caption{
-    background-color: rgba(104, 104, 104, 0.41) ;
-    
-}
+
 
 header li{
     color: white;
@@ -124,9 +121,11 @@ header li{
 }
 
 .down{
-    margin-top: 25vh;
+    text-align: center;
+    margin-top: 10vh;
     font-size: 32px;
     
+    width: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 main{
@@ -152,7 +151,10 @@ main{
     background-image: url(assets/examples/overall.png);
 }
 .i3{
-    background-image: url(assets/examples/chat.png);
+    background-image: url(assets/examples/chaten.jpeg);
+}
+.i-c{
+    background-image: url(assets/examples/construccion.png);
 }
 .proy-banne{
     border-radius: 10px;
@@ -162,7 +164,7 @@ main{
     height: fit-content;
 
     width: 650px;
-    margin: auto;
+    margin: 15px;
     margin-bottom: 15px;
     font-size: 1.2rem;
     
@@ -173,9 +175,13 @@ main{
     background-color: rgba(151, 51, 232, 0.526);
 }
 .tec-icon{
-    
+    border: 1px solid blueviolet;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    background-color: rgba(119, 37, 195, 0.697);
     width: 130px;
-    height: auto;
+    height: 180px;
 }
 
 /* idioma y modos */
@@ -283,3 +289,5 @@ footer{
 footer li{
     width: fit-content;
 }
+
+
